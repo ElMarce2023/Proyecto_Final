@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <link rel="stylesheet" href="{% static './css/form1.css' %}">
+
+   
+     <!--REFERENCIA Icon-Font-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <title>PROYECTO MIS MASCOTAS</title>
+</head>
+<body>
+    <div class="contenedor">
+       
+        <header class="encabezado">
+            <div id ="logo">
+                <img src="{% static './icons/pata.png' %}" alt="Mi Mascota">                 
+            </div> 
+            <div class="menu">
+
+              <nav>               
+                    <ul>
+                        <li><a href="{% url 'index' %}">INICIO</a></li>
+                        <li><a href="{% url 'nosotros' %}">NOSOTROS</a></li>
+                        <li><a href="{% url 'consumirAPI' %}">GALERIA</a></li>
+                        <li><a href="{% url 'form1' %}">ADOPTA</a></li>
+                    </ul>                
+                </nav>
+            </div>
+        </header>
+    </div>
+    
+    {% block content %}
+    {% endblock %}
+   
+    {% block pie %}
+    {% endblock %}  
+    
+</div>   
+</body>
+</html>
+  

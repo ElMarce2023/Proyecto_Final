@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO MIS MASCOTAS</title>
+    
+    <link rel="stylesheet" href="{% static './css/nosotros.css' %}">
+    <link rel="stylesheet" href="{% static './css/form1.css' %}">
+
+     <!--REFERENCIA Icon-Font-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="contenedor">   
+            
+        <main>    
+            <section class="container">
+                <article>
+                    <div>
+                        <img src="{% static './img/equipodetrabajo.jpg' %}" class="noticias5">
+                    </div>
+                    <br>
+                    <div class="caja">
+                        <div>
+                            <h2>NOSOTROS</h2>
+                            <br>
+                            <p>PROYECTO MIS MASCOTAS está compuesto por voluntarios que comparten el respeto por la vida de
+                                los animales y los consideran sus iguales siendo que estos tienen capacidad para sentir
+                                placer, alegría, dolor y sufrimiento.
+                            </p>
+                            <br>
+                            <h2>NUESTRA MISION</h2>
+                            <br>
+                            <p>PROYECTO MIS MASCOTAS es una organización sin fines de lucro liderada por un grupo de
+                                voluntarios que buscan superar la situación de sobrepoblación, abandono, crueldad e
+                                indiferencia que viven millones de animales en nuestro país. (Buenos Aires/ Argentina).
+                                Propiciamos una actitud de respeto hacia todas las especies, entendiendo que no son “cosas”
+                                para ser utilizadas por el ser humano. Rechazamos todo tipo de explotación animal,
+                                incluyendo su uso como vestimenta, comida, entretenimiento y experimentación.
+                            </p>
+
+
+                        </div>
+
+                    </div>
+                    <br>
+                </article>
+                <article class="caja1">
+
+                    <div>
+                        <h2>NUESTROS OBJETIVOS</h2>
+                        <br>                        
+                        <ul class="contenido_lista">
+                            <li>Luchar contra el abandono, el maltrato y el sufrimiento animal.</li>
+                            <li>Educar sobre el respeto por la vida de los animales a través de charlas y talleres educativos en
+                                lugares públicos y privados.</li>
+                            <li>Organizar campañas de castración gratuitas y/o a bajo costo en las zonas vulnerables donde el
+                                Estado está ausente y los perros y gatos se reproducen sin control.</li>
+                            <li>Concientizar sobre la importancia de las castraciones masivas, gratuitas, sistemáticas y
+                                extensivas como único método ético de control de la superpoblación animal y exigir al Estado que
+                                cumpla con la normativa vigente.</li>  
+                            <li>Asistir a animales en situación de riesgo de muerte, brindarles la atención médica necesaria
+                                para recuperarlos y encontrar familias responsables para su adopción.</li>  
+                            <li> Asesorar a la población respecto a cómo actuar en casos de maltrato animal.</li>
+                        </ul>
+                        <br>
+                        <h2>¿COMO TRABAJAMOS?</h2>
+                        <br>                        
+                         <ul class="contenido_lista">
+                            <li> <span class="titulo_lista"> La acción directa: </span> asistir a animales abandonados en situación de riesgo, promoviendo su adopción
+                                y tenencia por parte de hogares responsables que estén en condiciones de brindarles albergue,
+                                atención y afecto.</li>
+                            <li> <span class="titulo_lista">La acción preventiva:</span> fomentar entre el público general la necesidad y la importancia de castrar
+                                machos y esterilizar las hembras antes del primer celo y exigiendo a las autoridades la
+                                aplicación de las leyes que los obligan a realizar campañas de castración masivas, gratuitas,
+                                extendidas, sistemáticas y permanentes, como único medio humanitario, sustentable y no
+                                eutanásico de control de la superpoblación animal.</li>
+                            <li><span class="titulo_lista">Las acciones en el plano legislativo y judicial:</span> exigir la aplicación de la ley 14.346 de
+                                protección animal y denunciar ante las autoridades todo acto de maltrato y crueldad; presentar y
+                                apoyar proyectos de ley que beneficien a los animales.</li>
+                            <li><span class="titulo_lista">Las actividades educativas:</span> desarrollar actividades educativas sobre trato ético hacia los
+                                animales.</li>
+                            <li><span class="titulo_lista">Las actividades asistenciales: </span>rescatar animales en situación de riesgo con el fin de
+                                recuperarlos y darles la posibilidad de formar parte de una familia que le brinde lo que necesita.</li>    
+                        </ul>        
+                    </div>
+                    <br>          
+                    
+                </article>
+            </section>
+        </main>
+               
+
+    </div>   
+ 
+    
+ 
+</body>
+
+</html>
+{% endblock %}
+
+{% block pie %}        
+    <footer>   
+        <section class="buttons">   
+        <a href="https://es-la.facebook.com" target="_blank" class="fa fa-facebook" ></a>
+        <a href="https://twitter.com/i/flow/login" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://accounts.google.com" target="_blank" class="fa fa-google-plus"></a>
+        <a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube"></a>
+        <a href="https://instagram.com/" target="_blank" class="fa fa-instagram"></a>
+        </section>
+    
+        <div class="grupo-2">
+        <small>&copy; 2023 <b>Proyecto Mis Mascotas - 23015 - Grupo 15</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer> 
+{% endblock %}
+
+

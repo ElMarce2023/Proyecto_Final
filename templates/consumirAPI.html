@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <link rel="stylesheet" href="{% static './css/consumirAPI.css' %}">
+    <link rel="stylesheet" href="{% static './css/form1.css' %}">
+
+    <!--REFERENCIA Icon-Font-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!--REFERENCIA  NIMACIONES DE TEXTO-->
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <title>PROYECTO MIS MASCOTAS</title>
+</head>
+<body>
+    <div class="contenedor">
+       
+        <h1 class="animate__animated animate__bounce">Galeria de imagenes</h1>
+
+        <div class="buttons">
+            <button id="actualizar">Actualizar imagenes</button>            
+            <a href="{% url 'index' %}" id="enlace_Volver">Volver</a>        
+        </div>
+        <div id="grid" class="imagen"></div>
+        
+
+    </div>
+    <script src="{% static './js/consumirAPI.js' %}"></script>
+    
+    
+</body>
+</html>
+{% endblock %}
+
+{% block pie %}        
+    <footer>   
+        <section class="buttons">   
+        <a href="https://es-la.facebook.com" target="_blank" class="fa fa-facebook" ></a>
+        <a href="https://twitter.com/i/flow/login" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://accounts.google.com" target="_blank" class="fa fa-google-plus"></a>
+        <a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube"></a>
+        <a href="https://instagram.com/" target="_blank" class="fa fa-instagram"></a>
+        </section>
+    
+        <div class="grupo-2">
+        <small>&copy; 2023 <b>Proyecto Mis Mascotas - 23015 - Grupo 15</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer> 
+{% endblock %}

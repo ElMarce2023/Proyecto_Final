@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+ <div class ="contenedor">
+    
+        <main class="contenido">
+            <div class="carrusel">
+            
+                <img src="{% static './img/mascotas.jpg' %}" alt="">    
+                <img src="{% static './img/perros-gatos2.jpg' %}" alt="">    
+                <img src="{% static './img/perros-gatos.jpg' %}" alt="">
+
+            </div>
+            
+        </main>
+
+        <aside class="sidebar">
+            
+            <div class="noticias">                
+                <h2>NOTICIAS</h2>
+                
+                <a href="{% url 'noticias' %}" target="_blank"><img src="{% static './img/noticia.jpg' %}" alt="Noticias"></a>
+            </div>
+
+            <div class="ubicacion">
+                <h2>VISITANOS</h2>
+                <!-- Mapa embebido -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13090.43509821207!2d-58.4327792!3d-34.8911692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd524123fd69d%3A0xc8636b72951eb39b!2sEl%20campito%20Refugio!5e0!3m2!1ses-419!2sar!4v1685390049489!5m2!1ses-419!2sar" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>          
+            </div>
+
+            
+            
+        </aside>
+
+        <div class="widget-1">
+            <div id="fondo-Galeria" class="widget-1">
+                          
+                <a href="{% url 'consumirAPI' %}"><h2>GALERIA DE IMAGENES</h2></a>
+            </div>
+        </div>
+        
+        <div class="widget-2">     
+            <div id="fondo-Colabora" class="widget-2">            
+                <h2>COLABORA CON NOSOTROS</h2>
+            </div>
+        </div>
+
+        
+    </div>     
+{% endblock %}
+
+{% block pie %}        
+    <footer>   
+        <section class="buttons">   
+        <a href="https://es-la.facebook.com" target="_blank" class="fa fa-facebook" ></a>
+        <a href="https://twitter.com/i/flow/login" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://accounts.google.com" target="_blank" class="fa fa-google-plus"></a>
+        <a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube"></a>
+        <a href="https://instagram.com/" target="_blank" class="fa fa-instagram"></a>
+        </section>
+    
+        <div class="grupo-2">
+        <small>&copy; 2023 <b>Proyecto Mis Mascotas - 23015 - Grupo 15</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer> 
+{% endblock %}

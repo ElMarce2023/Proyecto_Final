@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO MIS MASCOTAS</title>
+    <link rel="stylesheet" href="{% static './css/noticias.css' %}">
+   
+</head>
+
+<body>
+    <h1>NOTICIAS</h1>
+    <div class="container_noticias">
+        <div class="card">
+            <img src="{% static './img/noticias4.jpg' %}">
+            <h4>AMOR POR LOS ANIMALES</h4>
+            
+            <p>TIENE 18 AÑOS. La adolescente invitó a los vecinos a juntar y donar tapitas que sirven para generar un
+                ingreso económico a las organizaciones que rescatan animales.</p>
+            <a href="#">leer mas</a>
+        </div>
+
+        <div class="card">
+            <img src="{% static './img/noticias3.jpg' %}">
+            <h4>DIA DEL ANIMAL</h4>
+            
+            <p> ONG que luchan contra la crueldad animal: historias de los refugios que salvan a perros y gatos
+                Reivindican la adopción y destacan el impacto de las redes sociales. </p>
+            <a href="#">leer mas</a>
+        </div>
+
+        <div class="card">
+            <img src="{% static './img/noticias2.jpg' %}">
+            <h4>MILAGROS PERRUNOS</h4>
+            
+            <p>Milagros Perrunos: refugio para perros con discapacidad en Lima
+                El albergue está en Chorrillos y actualmente atiende a unos 40 perros que han sufrido algún accidente o abuso doméstico</p>
+            <a href="#">leer mas</a>
+        </div>     
+
+    </div>
+{% endblock %}
+
+</body>
+
+</html>
