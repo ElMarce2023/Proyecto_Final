@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{   
+    background-image: linear-gradient(#FAEDCD, #FEFAE0);  
+    color:#000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor{
+    width: 100%;  
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-rows: (4, auto); /* al ponerle auto hace que sea responsive */
+
+
+    /* Defino el bosquejo de mi sitio en un dispositivo grande*/
+    grid-template-areas: "encabezado encabezado encabezado"
+                         "contenido contenido sidebar" 
+                         "widget-1 widget-2 sidebar"
+                         "pie pie pie";
+}
+
+.contenedor > div,
+.contenedor .encabezado,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .pie {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+/* Encabezado */
+
+.contenedor .encabezado{
+    background: #D4A373;
+    color: black;  
+    grid-area: encabezado;
+}
+
+/* Posiciono el logo */
+#logo img {
+  object-fit: cover;
+  width:3%;
+  height:3%;  
+  float: left;  
+}
+
+/* Posiciono el menu */
+.menu {
+    float: right;
+}
+
+/* Barra de navegación */
+
+.encabezado ul {
+    list-style-type: none;    
+    padding: 1rem;
+    overflow: hidden;
+    background-color: #D4A373;      
+    top: 0;
+    width: 100%;     
+    text-align: right; 
+  }
+
+  .encabezado ul li {    
+    display: inline-block;
+    border-right: 1px solid #CCD5AE;      
+  }
+
+  .encabezado ul li a {   
+    color: black;  
+    padding: 14px 16px;
+    text-decoration: none;    
+    font-size: 20px;
+  }
+ 
+  .encabezado ul li a:hover {
+    background-color: #CCD5AE;
+  }
+
+
+  /* Main */
+
+.contenedor .contenido {   
+    grid-area: contenido;
+}
+
+.contenedor img {
+  object-fit: cover;
+  width:100%;
+  height:100%;
+}
+
+
+/* Carrusel*/
+
+.carrusel{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow-x: scroll;
+
+  /*capturo el scroll horizontal del contenedor y hago que sea obligatorio que siempre, 
+  al dejar de hacer scroll, vaya a un punto de anclaje. (Esto evita que nuestro carrusel 
+  se quede en mitad de dos imágenes) */
+  scroll-snap-type: x mandatory;
+}
+
+.carrusel img {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+
+    /*Indicó que el punto de anclaje es el centro del elemento (para que las imágenes siempre quedarán alineadas).*/
+    scroll-snap-align: center;
+}
+
+/* Modifico estilo de barra de desplazamiento de carrusel*/
+
+.carrusel::-webkit-scrollbar {
+    width: 13px;     /* Tamaño del scroll en vertical */  
+}
+
+/* Pongo un color de fondo y redondeo las esquinas del thumb */
+.carrusel::-webkit-scrollbar-thumb {
+    background: #CCD5AE;
+    border-radius: 4px;
+}
+
+/* Cambio el fondo y agrego una sombra cuando esté en hover */
+.carrusel::-webkit-scrollbar-thumb:hover {
+    background: #D4A373;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambio el fondo cuando esté en active */
+.carrusel::-webkit-scrollbar-thumb:active {
+    background-color:#b3b3b3;
+}
+
+/* widget-1 y widget-2 */
+.contenedor .widget-1,
+.contenedor .widget-2 {
+    background: #CCD5AE;
+    color:#000;
+    height: 500px;
+     /* Utilizo flexbox para alinear el contenido */
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+
+.contenedor .widget-1 {
+    margin-left: 20px;
+    grid-area: widget-1;
+    display: flex;
+    justify-content:center;    
+}
+
+#fondo-Galeria{
+    background-image: url(./static/img/galeria.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#fondo-Galeria a{
+    text-decoration: none;
+}
+
+.contenedor .widget-2 {
+    grid-area: widget-2;
+    display: flex;
+    justify-content:center;    
+}
+
+#fondo-Colabora{
+    background-image: url(./static/img/colabora.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+/* Aside */
+
+.contenedor .sidebar {
+    background:#CCD5AE;    
+    display: block;
+    grid-area: sidebar;
+}
+
+.contenedor .sidebar >div{
+    padding-bottom: 10px;
+}
+
+
+
+h2{
+    text-align: center;
+    color: #000;
+    background-color: #D4A373;
+    font-size: 30px;
+    padding: 0.25em 0;
+}
+
+@keyframes titulo-animado {
+    0%  {background-color: #D4A373; color:black;}
+    50%   {color: #D4A373; background-color: black;}    
+    
+    
+}
+
+h2:hover{
+    color: #D4A373;
+    animation-name: titulo-animado;
+    animation-duration: 4s;
+}
+
+.noticias{
+    margin-top: 4em;
+}
+.ubicacion{
+    margin-top: 4em;
+}
+
+.ubicacion iframe{
+    width: 75vh;
+    height: 75vh;    
+}
+
+/* Footer */
+
+.contenedor .pie {
+    background-color: #D4A373;
+    color:black;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: pie;
+}
+
+
+
+ /* Defino el bosquejo de mi sitio en un dispositivo mediano*/
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"
+                             "sidebar sidebar sidebar"
+                             "widget-1 widget-1 widget-2"
+                             "pie pie pie";
+    }
+
+    .contenedor img {      
+        width:75%;        
+    }
+
+}
+
+
+ /* Defino el bosquejo de mi sitio en un dispositivo chico*/
+@media screen and (max-width: 450px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"                             
+                             "widget-1 widget-1 widget-1"
+                             "widget-2 widget-2 widget-2"
+                             "sidebar sidebar sidebar"
+                             "pie pie pie";
+    }
+
+    .contenedor img {      
+        width:50%;       
+    }
+}

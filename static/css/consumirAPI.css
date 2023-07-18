@@ -1,0 +1,95 @@
+body{   
+    background-image: linear-gradient(#FAEDCD, #FEFAE0);  
+    color:#000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor{
+  width: 100%;  
+  display: grid;
+  gap: 20px;
+
+  grid-template-columns: repeat(1, 1fr);
+
+  grid-template-rows: (5, auto); /* al ponerle auto hace que sea responsive */
+
+
+  /* Defino el bosquejo de mi sitio en un dispositivo grande*/
+  grid-template-areas: "encabezado"
+                       "contenido"              
+                       "contenido"  
+                       "contenido"        
+                       "pie";
+}
+
+  
+ .buttons {     
+    text-align:center;   
+    margin-right: 200px;
+    margin-left: 100px;  
+  }
+    
+  #actualizar a, #enlace_Volver a{	
+      margin-right: 35px;     
+      text-decoration: none;
+      font-size: 16px;
+      width: 50px;
+      height: 75px;
+      line-height: 60px;
+      text-align: center;
+      background: #314652;
+      color: #f1f1f1;
+      border-radius: 50%;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+      transition: all .4s ease-in-out;
+   }
+    
+    #actualizar a:hover #enlace_Volver a:hover{
+    transform: scale(1.2);
+    } 
+
+    #actualizar, #enlace_Volver {
+      /*width: 30%;*/
+      width: 195px;
+      height:80px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 1em 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 5em;
+       
+    }
+
+   
+      
+  .col {
+    padding: 1%;
+  }
+  .col-lg{
+      height: 200px;
+      overflow: hidden;
+      margin: 10px 0;
+      position: relative;
+      flex-basis: 30%;
+  }
+  
+    
+  .col-lg img{
+    display:block;
+      position: absolute;
+      left: -1000%;
+      right: -1000%;
+      top: -1000%;
+      bottom: -1000%;
+      margin: auto;
+      min-height: 100%;
+      min-width: 100%;
+  }
+  .imagen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }

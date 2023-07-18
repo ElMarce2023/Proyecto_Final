@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto:wght@100;400&display=swap');
+
+
+
+
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{   
+    background-image: linear-gradient(#FAEDCD, #FEFAE0);  
+    color:#000;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    text-align: center;
+    color: #000;
+    background-color: #D4A373;
+    font-size: 30px;
+    padding: 0.25em 0;
+}
+
+@keyframes titulo-animado {
+    0%  {background-color: #D4A373; color:black;}
+    50%   {color: #D4A373; background-color: black;}    
+    
+    
+}
+
+h1:hover{
+    color: #D4A373;
+    animation-name: titulo-animado;
+    animation-duration: 4s;
+}
+
+h1{
+    text-align:center;
+    font-size: 40px;
+    color: #414040;
+    margin-top: 100px;
+    font-weight: 30px ;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.container_noticias{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.container_noticias .card{
+    background-color: #D4A373;
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align:center;
+    transition: all 0.25s;
+}
+.container_noticias .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+
+}
+.container_noticias .card img{
+    width:330px;
+    height:200px;
+
+
+}
+.container_noticias .card h4{
+    font-weight: 600;
+}
+.container_noticias .card p{
+    padding: 0 1rem;
+    font-size: 14px;
+    font-weight: 300px;
+}
+.container_noticias .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
